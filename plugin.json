@@ -12,5 +12,15 @@
   "sourceUrl": "",
   "donateUrl": "",
   "changelogUrl": "",
-  "modules": []
+  "modules": [
+    {
+      "slug": "RangeExtender",
+      "name": "Range Extender",
+      "description": "Subdivide a unipolar signal into a series of full-range output signals",
+      "tags": [
+        "Function generator",
+        "Utility"
+      ]
+    }
+  ]
 }
