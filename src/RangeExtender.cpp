@@ -47,7 +47,7 @@ struct RangeExtender : Module {
 		configParam(OVERLAP_PARAM, 0.0f, 100.0f, 0.0f, "Amount of Output Overlap", "%");
 	}
 
-	float clampLerp(float v, float min, float max) {
+	float clampLerpToTen(float v, float min, float max) {
 		return (v < min) ? 0.0f : (v > max) ? 10.0f : (v - min) / (max - min) * 10.0f;
 	};
 
@@ -69,7 +69,7 @@ struct RangeExtender : Module {
 			if (outputs[OutputId(i)].isConnected()) {
 				float min = 10.0 * (range_step) / number_of_outputs;
 				float max = 10.0 * (range_step + 1) / number_of_outputs;
-				float out = clampLerp(source_voltage, min, max);
+				float out = clampLerpToTen(source_voltage, min, max);
 				outputs[OutputId(i)].setVoltage(out);
 				lights[LightId(i)].setBrightness(out / 10.0f);
 				range_step++;
