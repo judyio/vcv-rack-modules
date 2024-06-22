@@ -3,6 +3,7 @@
 
 struct RangeExtender : Module {
 	enum ParamId {
+		OVERLAP_PARAM,
 		PARAMS_LEN
 	};
 	enum InputId {
@@ -43,6 +44,7 @@ struct RangeExtender : Module {
 		configOutput(OUT6_OUTPUT, "Output 6");
 		configOutput(OUT7_OUTPUT, "Output 7");
 		configOutput(OUT8_OUTPUT, "Output 8");
+		configParam(OVERLAP_PARAM, 0.0f, 100.0f, 0.0f, "Amount of Output Overlap", "%");
 	}
 
 	float clampLerp(float v, float min, float max) {
@@ -51,6 +53,7 @@ struct RangeExtender : Module {
 
 	void process(const ProcessArgs& args) override {
 		float source_voltage = inputs[INPUT_INPUT].getVoltage();
+		float overlap = params[OVERLAP_PARAM].getValue() / 100.0f;
 
 		// first loop, count number of plugged in outputs
 		int number_of_outputs = 0;
@@ -102,6 +105,8 @@ struct RangeExtenderWidget : ModuleWidget {
 		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 90.0)),  module, RangeExtender::OUT6_OUTPUT));
 		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 102.0)), module, RangeExtender::OUT7_OUTPUT));
 		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 114.0)), module, RangeExtender::OUT8_OUTPUT));
+
+		addParam(createParamCentered<RoundBlackKnob>(mm2px(Vec(15.0, 120.0)), module, RangeExtender::OVERLAP_PARAM));
 
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 30.0)),  module, RangeExtender::BLINK1_LIGHT));
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 42.0)),  module, RangeExtender::BLINK2_LIGHT));
