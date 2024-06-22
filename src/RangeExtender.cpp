@@ -51,6 +51,10 @@ struct RangeExtender : Module {
 		return (v < min) ? 0.0f : (v > max) ? 10.0f : (v - min) / (max - min) * 10.0f;
 	};
 
+	float basicLerp(float v, float inmin, float inmax, float outmin, float outmax) {
+		return outmin + ((outmax - outmin) * ((v - inmin) / (inmax - inmin)));
+	};
+
 	void process(const ProcessArgs& args) override {
 		float source_voltage = inputs[INPUT_INPUT].getVoltage();
 		float overlap = params[OVERLAP_PARAM].getValue() / 100.0f;
