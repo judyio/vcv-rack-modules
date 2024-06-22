@@ -55,6 +55,10 @@ struct RangeExtender : Module {
 		return outmin + ((outmax - outmin) * ((v - inmin) / (inmax - inmin)));
 	};
 
+	float percentageLerp(float v, float outmin, float outmax) {
+		return outmin + (outmax - outmin) * v;
+	}
+
 	void process(const ProcessArgs& args) override {
 		float source_voltage = inputs[INPUT_INPUT].getVoltage();
 		float overlap = params[OVERLAP_PARAM].getValue() / 100.0f;
@@ -71,8 +75,8 @@ struct RangeExtender : Module {
 		int range_step = 0;
 		for (int i = 0; i < OUTPUTS_LEN; i++) {
 			if (outputs[OutputId(i)].isConnected()) {
-				float min = 10.0 * (range_step) / number_of_outputs;
-				float max = 10.0 * (range_step + 1) / number_of_outputs;
+				float min = 10.0 * percentageLerp(overlap, range_step, 0.0) / number_of_outputs;
+				float max = 10.0 * percentageLerp(overlap, (range_step + 1), number_of_outputs) / number_of_outputs;
 				float out = clampLerpToTen(source_voltage, min, max);
 				outputs[OutputId(i)].setVoltage(out);
 				lights[LightId(i)].setBrightness(out / 10.0f);
