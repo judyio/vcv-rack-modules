@@ -44,7 +44,7 @@ struct RangeExtender : Module {
 	}
 
 	float clampLerpToTen(float v, float min, float max) {
-		return (v < min) ? 0.0f : (v > max) ? 10.0f : (v - min) / (max - min) * 10.0f;
+		return (v < min) ? 0.0f : (v > max) ? 10.0f : smootherstep((v - min) / (max - min)) * 10.0f;
 	};
 
 	float basicLerp(float v, float inmin, float inmax, float outmin, float outmax) {
@@ -53,6 +53,14 @@ struct RangeExtender : Module {
 
 	float percentageLerp(float v, float outmin, float outmax) {
 		return outmin + (outmax - outmin) * v;
+	}
+
+	float smoothstep(float x) {
+		return x * x * (3.0f - 2.0f * x);
+	}
+
+	float smootherstep(float x) {
+		return x * x * x * (x * (6.0f * x - 15.0f) + 10.0f);
 	}
 
 	void process(const ProcessArgs& args) override {
