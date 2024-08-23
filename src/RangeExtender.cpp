@@ -10,6 +10,7 @@ struct RangeExtender : Module {
 	enum InputId {
 		INPUT_INPUT,
 		INPUT_OVERLAP,
+		INPUT_SMOOTH,
 		INPUTS_LEN
 	};
 	enum OutputId {
@@ -36,7 +37,8 @@ struct RangeExtender : Module {
 		configInput(INPUT_INPUT, "Input");
 		configParam(PARAM_OVERLAP, 0.0f, 100.0f, 0.0f, "Control output overlap directly", "%");
 		configInput(INPUT_OVERLAP, "Output overlap");
-		configParam(PARAM_SMOOTH, 0.0f, 100.0f, 0.0f, "Control smoothness", "%");
+		configParam(PARAM_SMOOTH, 0.0f, 100.0f, 0.0f, "Control smoothness directly", "%");
+		configInput(INPUT_SMOOTH, "Output smoothness");
 		configOutput(OUT1_OUTPUT, "Output 1");
 		configOutput(OUT2_OUTPUT, "Output 2");
 		configOutput(OUT3_OUTPUT, "Output 3");
@@ -76,7 +78,6 @@ struct RangeExtender : Module {
 
 	void process(const ProcessArgs& args) override {
 		float source_voltage = inputs[INPUT_INPUT].getVoltage();
-		float smooth_amount = params[PARAM_SMOOTH].getValue() / 100.0f;
 
 		// get overlap value
 		float overlap;
@@ -84,6 +85,14 @@ struct RangeExtender : Module {
 			overlap = inputs[INPUT_OVERLAP].getVoltage() / 10.0f;
 		} else {
 			overlap = params[PARAM_OVERLAP].getValue() / 100.0f;
+		}
+
+		// get smooth value
+		float smooth;
+		if (inputs[INPUT_SMOOTH].isConnected()) {
+			smooth = inputs[INPUT_SMOOTH].getVoltage() / 10.0f;
+		} else {
+			smooth = params[PARAM_SMOOTH].getValue() / 100.0f;
 		}
 
 		// first loop, count number of plugged in outputs
@@ -100,7 +109,7 @@ struct RangeExtender : Module {
 			if (outputs[OutputId(i)].isConnected()) {
 				float min = 10.0 * percentageLerp(overlap, range_step, 0.0) / number_of_outputs;
 				float max = 10.0 * percentageLerp(overlap, (range_step + 1), number_of_outputs) / number_of_outputs;
-				float out = smoothlyClampLerpToTen(source_voltage, min, max, smooth_amount);
+				float out = smoothlyClampLerpToTen(source_voltage, min, max, smooth);
 				outputs[OutputId(i)].setVoltage(out);
 				lights[LightId(i)].setBrightness(out / 10.0f);
 				range_step++;
@@ -129,6 +138,7 @@ struct RangeExtenderWidget : ModuleWidget {
 		addInput(createInputCentered<ThemedPJ301MPort>(mm2px(Vec(15.0, 20.0)),  module, RangeExtender::INPUT_INPUT));
 		addInput(createInputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 30.0 )), module, RangeExtender::INPUT_OVERLAP));
 		addParam(createParamCentered<RoundBlackKnob>(mm2px(Vec(10.0, 30.0)), module, RangeExtender::PARAM_OVERLAP));
+		addInput(createInputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 42.0 )), module, RangeExtender::INPUT_SMOOTH));
 		addParam(createParamCentered<RoundBlackKnob>(mm2px(Vec(10.0, 42.0)), module, RangeExtender::PARAM_SMOOTH));
 
 		// addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 30.0 )),  module, RangeExtender::OUT1_OUTPUT));
