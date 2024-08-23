@@ -4,6 +4,7 @@
 struct RangeExtender : Module {
 	enum ParamId {
 		PARAM_OVERLAP,
+		PARAM_SMOOTH,
 		PARAMS_LEN
 	};
 	enum InputId {
@@ -35,6 +36,7 @@ struct RangeExtender : Module {
 		configInput(INPUT_INPUT, "Input");
 		configParam(PARAM_OVERLAP, 0.0f, 100.0f, 0.0f, "Control output overlap directly", "%");
 		configInput(INPUT_OVERLAP, "Output overlap");
+		configParam(PARAM_SMOOTH, 0.0f, 100.0f, 0.0f, "Control smoothness", "%");
 		configOutput(OUT1_OUTPUT, "Output 1");
 		configOutput(OUT2_OUTPUT, "Output 2");
 		configOutput(OUT3_OUTPUT, "Output 3");
@@ -43,8 +45,17 @@ struct RangeExtender : Module {
 		configOutput(OUT6_OUTPUT, "Output 6");
 	}
 
-	float clampLerpToTen(float v, float min, float max) {
-		return (v < min) ? 0.0f : (v > max) ? 10.0f : smootherstep((v - min) / (max - min)) * 10.0f;
+	float smoothlyClampLerpToTen(float v, float min, float max, float smooth) {
+		// refactor to simplify
+		if (v < min) {
+			return 0.0f;
+		} else if (v > max) {
+			return 10.0f;
+		} else {
+			float linear_response = (v - min) / (max - min);
+			float smooth_response = smootherstep(linear_response);
+			return percentageLerp(smooth, linear_response, smooth_response) * 10.0f;
+		}
 	};
 
 	float basicLerp(float v, float inmin, float inmax, float outmin, float outmax) {
@@ -55,9 +66,9 @@ struct RangeExtender : Module {
 		return outmin + (outmax - outmin) * v;
 	}
 
-	float smoothstep(float x) {
-		return x * x * (3.0f - 2.0f * x);
-	}
+	// float smoothstep(float x) {
+	// 	return x * x * (3.0f - 2.0f * x);
+	// }
 
 	float smootherstep(float x) {
 		return x * x * x * (x * (6.0f * x - 15.0f) + 10.0f);
@@ -65,6 +76,7 @@ struct RangeExtender : Module {
 
 	void process(const ProcessArgs& args) override {
 		float source_voltage = inputs[INPUT_INPUT].getVoltage();
+		float smooth_amount = params[PARAM_SMOOTH].getValue() / 100.0f;
 
 		// get overlap value
 		float overlap;
@@ -88,7 +100,7 @@ struct RangeExtender : Module {
 			if (outputs[OutputId(i)].isConnected()) {
 				float min = 10.0 * percentageLerp(overlap, range_step, 0.0) / number_of_outputs;
 				float max = 10.0 * percentageLerp(overlap, (range_step + 1), number_of_outputs) / number_of_outputs;
-				float out = clampLerpToTen(source_voltage, min, max);
+				float out = smoothlyClampLerpToTen(source_voltage, min, max, smooth_amount);
 				outputs[OutputId(i)].setVoltage(out);
 				lights[LightId(i)].setBrightness(out / 10.0f);
 				range_step++;
@@ -117,6 +129,7 @@ struct RangeExtenderWidget : ModuleWidget {
 		addInput(createInputCentered<ThemedPJ301MPort>(mm2px(Vec(15.0, 20.0)),  module, RangeExtender::INPUT_INPUT));
 		addInput(createInputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 30.0 )), module, RangeExtender::INPUT_OVERLAP));
 		addParam(createParamCentered<RoundBlackKnob>(mm2px(Vec(10.0, 30.0)), module, RangeExtender::PARAM_OVERLAP));
+		addParam(createParamCentered<RoundBlackKnob>(mm2px(Vec(10.0, 42.0)), module, RangeExtender::PARAM_SMOOTH));
 
 		// addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 30.0 )),  module, RangeExtender::OUT1_OUTPUT));
 		// addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 42.0 )),  module, RangeExtender::OUT2_OUTPUT));
