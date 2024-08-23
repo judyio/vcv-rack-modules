@@ -18,8 +18,6 @@ struct RangeExtender : Module {
 		OUT4_OUTPUT,
 		OUT5_OUTPUT,
 		OUT6_OUTPUT,
-		// OUT7_OUTPUT,
-		// OUT8_OUTPUT,
 		OUTPUTS_LEN
 	};
 	enum LightId {
@@ -29,8 +27,6 @@ struct RangeExtender : Module {
 		BLINK4_LIGHT,
 		BLINK5_LIGHT,
 		BLINK6_LIGHT,
-		// BLINK7_LIGHT,
-		// BLINK8_LIGHT,
 		LIGHTS_LEN
 	};
 
@@ -45,9 +41,6 @@ struct RangeExtender : Module {
 		configOutput(OUT4_OUTPUT, "Output 4");
 		configOutput(OUT5_OUTPUT, "Output 5");
 		configOutput(OUT6_OUTPUT, "Output 6");
-		// configOutput(OUT7_OUTPUT, "Output 7");
-		// configOutput(OUT8_OUTPUT, "Output 8");
-
 	}
 
 	float clampLerpToTen(float v, float min, float max) {
