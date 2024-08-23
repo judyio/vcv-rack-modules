@@ -37,8 +37,8 @@ struct RangeExtender : Module {
 	RangeExtender() {
 		config(PARAMS_LEN, INPUTS_LEN, OUTPUTS_LEN, LIGHTS_LEN);
 		configInput(INPUT_INPUT, "Input");
-		configParam(PARAM_OVERLAP, 0.0f, 100.0f, 0.0f, "Direct Output Overlap", "%");
-		configInput(INPUT_OVERLAP, "Output Overlap");
+		configParam(PARAM_OVERLAP, 0.0f, 100.0f, 0.0f, "Control output overlap directly", "%");
+		configInput(INPUT_OVERLAP, "Output overlap");
 		configOutput(OUT1_OUTPUT, "Output 1");
 		configOutput(OUT2_OUTPUT, "Output 2");
 		configOutput(OUT3_OUTPUT, "Output 3");
@@ -64,13 +64,14 @@ struct RangeExtender : Module {
 
 	void process(const ProcessArgs& args) override {
 		float source_voltage = inputs[INPUT_INPUT].getVoltage();
+
+		// get overlap value
 		float overlap;
 		if (inputs[INPUT_OVERLAP].isConnected()) {
 			overlap = inputs[INPUT_OVERLAP].getVoltage() / 10.0f;
 		} else {
 			overlap = params[PARAM_OVERLAP].getValue() / 100.0f;
 		}
-
 
 		// first loop, count number of plugged in outputs
 		int number_of_outputs = 0;
