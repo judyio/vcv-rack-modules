@@ -8,7 +8,6 @@ void init(Plugin* p) {
 	pluginInstance = p;
 
 	// Add modules here
-	// p->addModel(modelMyModule);
 	p->addModel(modelRangeExtender);
 
 	// Any other plugin initialization may go here.
