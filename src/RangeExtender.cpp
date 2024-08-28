@@ -48,7 +48,6 @@ struct RangeExtender : Module {
 	}
 
 	float smoothlyClampLerpToTen(float v, float min, float max, float smooth) {
-		// refactor to simplify
 		if (v < min) {
 			return 0.0f;
 		} else if (v > max) {
@@ -67,10 +66,6 @@ struct RangeExtender : Module {
 	float percentageLerp(float v, float outmin, float outmax) {
 		return outmin + (outmax - outmin) * v;
 	}
-
-	// float smoothstep(float x) {
-	// 	return x * x * (3.0f - 2.0f * x);
-	// }
 
 	float smootherstep(float x) {
 		return x * x * x * (x * (6.0f * x - 15.0f) + 10.0f);
@@ -141,8 +136,6 @@ struct RangeExtenderWidget : ModuleWidget {
 		addInput(createInputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 42.0 )), module, RangeExtender::INPUT_SMOOTH));
 		addParam(createParamCentered<RoundBlackKnob>(mm2px(Vec(10.0, 42.0)), module, RangeExtender::PARAM_SMOOTH));
 
-		// addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 30.0 )),  module, RangeExtender::OUT1_OUTPUT));
-		// addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 42.0 )),  module, RangeExtender::OUT2_OUTPUT));
 		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 54.0 )), module, RangeExtender::OUT1_OUTPUT));
 		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 66.0 )), module, RangeExtender::OUT2_OUTPUT));
 		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 78.0 )), module, RangeExtender::OUT3_OUTPUT));
@@ -150,8 +143,6 @@ struct RangeExtenderWidget : ModuleWidget {
 		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 102.0)), module, RangeExtender::OUT5_OUTPUT));
 		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 114.0)), module, RangeExtender::OUT6_OUTPUT));
 
-		// addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 30.0 )),  module, RangeExtender::BLINK1_LIGHT));
-		// addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 42.0 )),  module, RangeExtender::BLINK2_LIGHT));
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 54.0 )), module, RangeExtender::BLINK1_LIGHT));
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 66.0 )), module, RangeExtender::BLINK2_LIGHT));
 		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 78.0 )), module, RangeExtender::BLINK3_LIGHT));
