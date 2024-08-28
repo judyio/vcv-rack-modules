@@ -45,12 +45,22 @@ struct RangeExtender : Module {
 		configOutput(OUT4_OUTPUT, "Output 4");
 		configOutput(OUT5_OUTPUT, "Output 5");
 		configOutput(OUT6_OUTPUT, "Output 6");
+
+		// Bypasses, if the user bypasses the module
 		configBypass(INPUT_INPUT, OUT1_OUTPUT);
 		configBypass(INPUT_INPUT, OUT2_OUTPUT);
 		configBypass(INPUT_INPUT, OUT3_OUTPUT);
 		configBypass(INPUT_INPUT, OUT4_OUTPUT);
 		configBypass(INPUT_INPUT, OUT5_OUTPUT);
 		configBypass(INPUT_INPUT, OUT6_OUTPUT);
+
+		// Extra tooltips for lights
+		configLight(BLINK1_LIGHT, "Output 1");
+		configLight(BLINK2_LIGHT, "Output 2");
+		configLight(BLINK3_LIGHT, "Output 3");
+		configLight(BLINK4_LIGHT, "Output 4");
+		configLight(BLINK5_LIGHT, "Output 5");
+		configLight(BLINK6_LIGHT, "Output 6");
 	}
 
 	float smoothlyClampLerpToTen(float v, float min, float max, float smooth) {
