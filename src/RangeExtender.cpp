@@ -45,6 +45,12 @@ struct RangeExtender : Module {
 		configOutput(OUT4_OUTPUT, "Output 4");
 		configOutput(OUT5_OUTPUT, "Output 5");
 		configOutput(OUT6_OUTPUT, "Output 6");
+		configBypass(INPUT_INPUT, OUT1_OUTPUT);
+		configBypass(INPUT_INPUT, OUT2_OUTPUT);
+		configBypass(INPUT_INPUT, OUT3_OUTPUT);
+		configBypass(INPUT_INPUT, OUT4_OUTPUT);
+		configBypass(INPUT_INPUT, OUT5_OUTPUT);
+		configBypass(INPUT_INPUT, OUT6_OUTPUT);
 	}
 
 	float smoothlyClampLerpToTen(float v, float min, float max, float smooth) {
