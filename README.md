@@ -39,11 +39,26 @@ When the module is bypassed, the input is routed directly to all outputs.
 
 ## Building from source
 
-This is a standard Rack plugin. With the [Rack SDK](https://vcvrack.com/manual/PluginDevelopmentTutorial) available:
+This is a standard Rack plugin, built with the [Rack SDK](https://vcvrack.com/manual/Building). Download the SDK for your platform — note that macOS ships a separate SDK per CPU architecture:
+
+- [Mac ARM64](https://vcvrack.com/downloads/Rack-SDK-latest-mac-arm64.zip) (Apple silicon) · [Mac x64](https://vcvrack.com/downloads/Rack-SDK-latest-mac-x64.zip) (Intel)
+- [Windows x64](https://vcvrack.com/downloads/Rack-SDK-latest-win-x64.zip) · [Linux x64](https://vcvrack.com/downloads/Rack-SDK-latest-lin-x64.zip)
+
+Unzip it, then tell the Makefile where it is:
 
 ```sh
-RACK_DIR=/path/to/Rack-SDK make
+export RACK_DIR=/absolute/path/to/Rack-SDK
 ```
+
+Alternatively, unzip it as a sibling of this repo (`../Rack-SDK`) — that's the Makefile's default, so no environment setup is needed.
+
+```sh
+make          # compile plugin.dylib (or .so / .dll)
+make dist     # package a distributable .vcvplugin
+make install  # build, package, and install into your Rack user folder
+```
+
+`make install` is the quickest way to try the module: restart Rack afterward and it appears under the judyIO brand.
 
 ## License
 
