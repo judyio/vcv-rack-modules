@@ -1,4 +1,4 @@
-# If RACK_DIR is not defined when calling the Makefile, default to two directories above
+# If RACK_DIR is not defined when calling the Makefile, default to a Rack-SDK directory alongside this one
 RACK_DIR ?= ../Rack-SDK
 
 
