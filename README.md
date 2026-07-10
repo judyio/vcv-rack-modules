@@ -1,12 +1,12 @@
-# Range Extender
+# Range Expander
 
 A utility module for [VCV Rack](https://vcvrack.com/) that subdivides a unipolar signal into a series of full-range output signals.
 
-![judyIO Range Extender](res/RangeExtender.svg)
+![judyIO Range Expander](res/RangeExpander.svg)
 
 ## What it does
 
-Patch a 0–10V signal into the input, and Range Extender splits its range across every connected output. Each output watches its own slice of the input range and rescales that slice to a full 0–10V sweep:
+Patch a 0–10V signal into the input, and Range Expander splits its range across every connected output. Each output watches its own slice of the input range and rescales that slice to a full 0–10V sweep:
 
 - With **2 outputs** connected: output 1 sweeps 0–10V while the input travels 0–5V, then output 2 sweeps 0–10V while the input travels 5–10V.
 - With **6 outputs** connected: each output covers one sixth of the input range.

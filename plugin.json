@@ -1,6 +1,6 @@
 {
-  "slug": "judyIO-RangeExtender",
-  "name": "Range Extender",
+  "slug": "judyIO-RangeExpander",
+  "name": "Range Expander",
   "version": "2.0.0",
   "license": "GPL-3.0-or-later",
   "brand": "judyIO",
@@ -8,14 +8,14 @@
   "authorEmail": "clinton@judy.io",
   "authorUrl": "https://judy.io",
   "pluginUrl": "",
-  "manualUrl": "https://github.com/judy/judyIO-RangeExtender#readme",
-  "sourceUrl": "https://github.com/judy/judyIO-RangeExtender",
+  "manualUrl": "https://github.com/judy/judyIO-RangeExpander#readme",
+  "sourceUrl": "https://github.com/judy/judyIO-RangeExpander",
   "donateUrl": "",
   "changelogUrl": "",
   "modules": [
     {
-      "slug": "RangeExtender",
-      "name": "Range Extender",
+      "slug": "RangeExpander",
+      "name": "Range Expander",
       "description": "Subdivide a unipolar signal into a series of full-range output signals",
       "tags": [
         "Function generator",

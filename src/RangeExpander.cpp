@@ -1,7 +1,7 @@
 #include "plugin.hpp"
 #include <iostream>
 
-struct RangeExtender : Module {
+struct RangeExpander : Module {
 	enum ParamId {
 		PARAM_OVERLAP,
 		PARAM_SMOOTH,
@@ -32,7 +32,7 @@ struct RangeExtender : Module {
 		LIGHTS_LEN
 	};
 
-	RangeExtender() {
+	RangeExpander() {
 		config(PARAMS_LEN, INPUTS_LEN, OUTPUTS_LEN, LIGHTS_LEN);
 		configInput(INPUT_INPUT, "Input");
 		configParam(PARAM_OVERLAP, 0.0f, 100.0f, 0.0f, "Control output overlap directly", "%");
@@ -133,12 +133,12 @@ struct RangeExtender : Module {
 };
 
 
-struct RangeExtenderWidget : ModuleWidget {
-	RangeExtenderWidget(RangeExtender* module) {
+struct RangeExpanderWidget : ModuleWidget {
+	RangeExpanderWidget(RangeExpander* module) {
 		setModule(module);
 		setPanel(createPanel(
-			asset::plugin(pluginInstance, "res/RangeExtender.svg"),
-			asset::plugin(pluginInstance, "res/RangeExtenderDark.svg")
+			asset::plugin(pluginInstance, "res/RangeExpander.svg"),
+			asset::plugin(pluginInstance, "res/RangeExpanderDark.svg")
 		));
 
 		addChild(createWidget<ThemedScrew>(Vec(RACK_GRID_WIDTH, 0)));
@@ -146,27 +146,27 @@ struct RangeExtenderWidget : ModuleWidget {
 		addChild(createWidget<ThemedScrew>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 		addChild(createWidget<ThemedScrew>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
-		addInput(createInputCentered<ThemedPJ301MPort>(mm2px(Vec(15.0, 20.0)),  module, RangeExtender::INPUT_INPUT));
-		addInput(createInputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 30.0 )), module, RangeExtender::INPUT_OVERLAP));
-		addParam(createParamCentered<RoundBlackKnob>(mm2px(Vec(10.0, 30.0)), module, RangeExtender::PARAM_OVERLAP));
-		addInput(createInputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 42.0 )), module, RangeExtender::INPUT_SMOOTH));
-		addParam(createParamCentered<RoundBlackKnob>(mm2px(Vec(10.0, 42.0)), module, RangeExtender::PARAM_SMOOTH));
+		addInput(createInputCentered<ThemedPJ301MPort>(mm2px(Vec(15.0, 20.0)),  module, RangeExpander::INPUT_INPUT));
+		addInput(createInputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 30.0 )), module, RangeExpander::INPUT_OVERLAP));
+		addParam(createParamCentered<RoundBlackKnob>(mm2px(Vec(10.0, 30.0)), module, RangeExpander::PARAM_OVERLAP));
+		addInput(createInputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 42.0 )), module, RangeExpander::INPUT_SMOOTH));
+		addParam(createParamCentered<RoundBlackKnob>(mm2px(Vec(10.0, 42.0)), module, RangeExpander::PARAM_SMOOTH));
 
-		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 54.0 )), module, RangeExtender::OUT1_OUTPUT));
-		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 66.0 )), module, RangeExtender::OUT2_OUTPUT));
-		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 78.0 )), module, RangeExtender::OUT3_OUTPUT));
-		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 90.0 )), module, RangeExtender::OUT4_OUTPUT));
-		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 102.0)), module, RangeExtender::OUT5_OUTPUT));
-		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 114.0)), module, RangeExtender::OUT6_OUTPUT));
+		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 54.0 )), module, RangeExpander::OUT1_OUTPUT));
+		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 66.0 )), module, RangeExpander::OUT2_OUTPUT));
+		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 78.0 )), module, RangeExpander::OUT3_OUTPUT));
+		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 90.0 )), module, RangeExpander::OUT4_OUTPUT));
+		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 102.0)), module, RangeExpander::OUT5_OUTPUT));
+		addOutput(createOutputCentered<ThemedPJ301MPort>(mm2px(Vec(20.0, 114.0)), module, RangeExpander::OUT6_OUTPUT));
 
-		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 54.0 )), module, RangeExtender::BLINK1_LIGHT));
-		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 66.0 )), module, RangeExtender::BLINK2_LIGHT));
-		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 78.0 )), module, RangeExtender::BLINK3_LIGHT));
-		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 90.0 )), module, RangeExtender::BLINK4_LIGHT));
-		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 102.0)), module, RangeExtender::BLINK5_LIGHT));
-		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 114.0)), module, RangeExtender::BLINK6_LIGHT));
+		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 54.0 )), module, RangeExpander::BLINK1_LIGHT));
+		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 66.0 )), module, RangeExpander::BLINK2_LIGHT));
+		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 78.0 )), module, RangeExpander::BLINK3_LIGHT));
+		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 90.0 )), module, RangeExpander::BLINK4_LIGHT));
+		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 102.0)), module, RangeExpander::BLINK5_LIGHT));
+		addChild(createLightCentered<MediumLight<RedLight>>(mm2px(Vec(10.0, 114.0)), module, RangeExpander::BLINK6_LIGHT));
 	}
 };
 
 
-Model* modelRangeExtender = createModel<RangeExtender, RangeExtenderWidget>("RangeExtender");
+Model* modelRangeExpander = createModel<RangeExpander, RangeExpanderWidget>("RangeExpander");
