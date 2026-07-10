@@ -196,6 +196,161 @@
   </g>
   <g
      inkscape:groupmode="layer"
+     id="layerLabels"
+     inkscape:label="LABELS">
+    <path
+       style="fill:#1f1f1f;stroke:none"
+       d="M9.4355 36.3914C9.4355 37.07 9.5733 37.2156 10.1557 37.2156H10.2051C10.7875 37.2156 10.9253 37.07 10.9253 36.3914V36.2406C10.9253 35.562 10.7875 35.4164 10.2051 35.4164H10.1557C9.5733 35.4164 9.4355 35.562 9.4355 36.2406ZM9.6513 36.2406C9.6513 35.6738 9.7319 35.5906 10.1583 35.5906H10.2051C10.6289 35.5906 10.7095 35.6738 10.7095 36.2406V36.3888C10.7095 36.9556 10.6289 37.0362 10.2051 37.0362H10.1583C9.7319 37.0362 9.6513 36.9556 9.6513 36.3888ZM12.7869 35.432H12.5659L12.0277 37.0232H12.0199L11.4765 35.432H11.2503L11.8743 37.2H12.1655ZM14.3053 37.0258H13.3693V36.368H14.2455V36.2016H13.3693V35.6036H14.2975V35.432H13.1535V37.2H14.3053ZM14.9397 36.3368V35.6036H15.4363C15.7665 35.6036 15.8263 35.6582 15.8263 35.9468V36.0118C15.8263 36.2588 15.7561 36.3368 15.5195 36.3368ZM16.0421 36.8828C16.0421 36.537 15.9927 36.446 15.7951 36.4096V36.4044C15.9641 36.3706 16.0421 36.2718 16.0421 35.9806V35.9208C16.0421 35.5386 15.9433 35.432 15.4805 35.432H14.7265V37.2H14.9397V36.5058H15.4493C15.7899 36.5058 15.8263 36.5552 15.8263 36.9608V37.2H16.0421ZM17.5995 37.0232H16.7519V35.432H16.5361V37.2H17.5995ZM18.7695 35.432H18.4601L17.8179 37.2H18.0415L18.1819 36.7996H19.0347L19.1725 37.2H19.3987ZM18.2313 36.6332 18.6057 35.5906H18.6213L18.9801 36.6332ZM19.9785 36.3654V35.6036H20.4361C20.8209 35.6036 20.8729 35.653 20.8729 35.9468V36.0222C20.8729 36.3082 20.8235 36.3654 20.4387 36.3654ZM19.9785 36.5396H20.4673C20.9561 36.5396 21.0835 36.4538 21.0835 36.017V35.952C21.0835 35.5152 20.9743 35.432 20.4595 35.432H19.7653V37.2H19.9785Z"
+       id="label-OVERLAP-37.2"
+       inkscape:label="OVERLAP" />
+    <path
+       style="fill:#1f1f1f;stroke:none"
+       d="M11.0436 50.6748C11.0436 50.3446 10.9422 50.2432 10.417 50.2016C9.9958 50.1678 9.9412 50.1132 9.9412 49.9156V49.8792C9.9412 49.64 10.0062 49.5854 10.3364 49.5854H10.3806C10.7368 49.5854 10.7966 49.6504 10.7966 49.913V49.9598H11.002V49.9026C11.002 49.523 10.9032 49.4164 10.3702 49.4164H10.3182C9.8528 49.4164 9.7306 49.5334 9.7306 49.8766V49.9182C9.7306 50.2406 9.8372 50.3446 10.3468 50.3836C10.7862 50.4174 10.8304 50.4694 10.8304 50.6878V50.7242C10.8304 50.992 10.7628 51.044 10.417 51.044H10.3676C9.9802 51.044 9.9152 50.9842 9.9152 50.7086V50.6462H9.7124V50.719C9.7124 51.1298 9.806 51.2156 10.3806 51.2156H10.4404C10.9162 51.2156 11.0436 51.1142 11.0436 50.7164ZM13.4174 49.432H13.0846L12.4762 50.9842H12.4684L11.8548 49.432H11.5142V51.2H11.7196L11.7144 49.6088H11.7222L12.3592 51.2H12.5776L13.2094 49.6088H13.2172L13.212 51.2H13.4174ZM13.8906 50.3914C13.8906 51.07 14.0284 51.2156 14.6108 51.2156H14.6602C15.2426 51.2156 15.3804 51.07 15.3804 50.3914V50.2406C15.3804 49.562 15.2426 49.4164 14.6602 49.4164H14.6108C14.0284 49.4164 13.8906 49.562 13.8906 50.2406ZM14.1064 50.2406C14.1064 49.6738 14.187 49.5906 14.6134 49.5906H14.6602C15.084 49.5906 15.1646 49.6738 15.1646 50.2406V50.3888C15.1646 50.9556 15.084 51.0362 14.6602 51.0362H14.6134C14.187 51.0362 14.1064 50.9556 14.1064 50.3888ZM15.812 50.3914C15.812 51.07 15.9498 51.2156 16.5322 51.2156H16.5816C17.164 51.2156 17.3018 51.07 17.3018 50.3914V50.2406C17.3018 49.562 17.164 49.4164 16.5816 49.4164H16.5322C15.9498 49.4164 15.812 49.562 15.812 50.2406ZM16.0278 50.2406C16.0278 49.6738 16.1084 49.5906 16.5348 49.5906H16.5816C17.0054 49.5906 17.086 49.6738 17.086 50.2406V50.3888C17.086 50.9556 17.0054 51.0362 16.5816 51.0362H16.5348C16.1084 51.0362 16.0278 50.9556 16.0278 50.3888ZM18.4042 49.6062H18.9658V49.432H17.6268V49.6062H18.1884V51.2H18.4042ZM20.7312 49.432H20.5154V50.186H19.5482V49.432H19.3324V51.2H19.5482V50.3758H20.5154V51.2H20.7312Z"
+       id="label-SMOOTH-51.2"
+       inkscape:label="SMOOTH" />
+    <path
+       style="fill:#1f1f1f;stroke:none"
+       d="M13.984 56.162H13.7266L13.2534 56.6378L13.373 56.7678L13.7682 56.3622H13.7734V57.93H13.984Z"
+       id="label-1-57.93"
+       inkscape:label="1" />
+    <path
+       style="fill:#1f1f1f;stroke:none"
+       d="M14.4039 69.161H13.3223V69.0596C13.3223 68.7294 13.3561 68.6956 13.8163 68.6254C14.2765 68.5578 14.3987 68.4694 14.3987 68.0742V68.0248C14.3987 67.6426 14.2869 67.5464 13.7721 67.5464H13.7383C13.2287 67.5464 13.1403 67.6452 13.1403 68.0898V68.1366H13.3379V68.0846C13.3379 67.7648 13.3847 67.7128 13.7435 67.7128H13.7799C14.1283 67.7128 14.1881 67.77 14.1881 68.03V68.0768C14.1881 68.355 14.1231 68.407 13.7331 68.4642C13.1923 68.5422 13.1143 68.6254 13.1143 69.0934C13.1143 69.122 13.1143 69.2962 13.1169 69.33H14.4039Z"
+       id="label-2-69.33"
+       inkscape:label="2" />
+    <path
+       style="fill:#1f1f1f;stroke:none"
+       d="M14.4143 80.2204C14.4143 79.9318 14.3285 79.8616 14.1647 79.8278V79.8226C14.3259 79.781 14.3805 79.7056 14.3805 79.4534V79.4066C14.3805 79.0348 14.2713 78.9464 13.7513 78.9464H13.7097C13.2105 78.9464 13.1221 79.04 13.1221 79.469V79.5314H13.3171V79.469C13.3171 79.1544 13.3743 79.1154 13.7149 79.1154H13.7487C14.1153 79.1154 14.1725 79.17 14.1725 79.4196V79.4716C14.1725 79.6952 14.1153 79.7472 13.8891 79.7472H13.5641V79.911H13.9047C14.1413 79.911 14.2037 79.9656 14.2037 80.2074V80.2594C14.2037 80.5298 14.1413 80.574 13.7461 80.574H13.7019C13.3431 80.574 13.2989 80.5324 13.2989 80.2204V80.158H13.1013V80.2178C13.1013 80.6598 13.1819 80.7456 13.6967 80.7456H13.7487C14.2921 80.7456 14.4143 80.652 14.4143 80.275Z"
+       id="label-3-80.73"
+       inkscape:label="3" />
+    <path
+       style="fill:#1f1f1f;stroke:none"
+       d="M14.2284 91.7218H14.4416V91.5554H14.2284V90.362H13.9372L13.0584 91.5008V91.7218H14.0282V92.13H14.2284ZM13.243 91.5554V91.5476L14.0204 90.5284H14.0282V91.5554Z"
+       id="label-4-92.13"
+       inkscape:label="4" />
+    <path
+       style="fill:#1f1f1f;stroke:none"
+       d="M13.7695 103.546C14.3129 103.546 14.4195 103.436 14.4195 102.994V102.903C14.4195 102.472 14.3233 102.368 13.8527 102.368H13.7955C13.4887 102.368 13.3873 102.407 13.3327 102.513H13.3301V101.928H14.3727V101.762H13.1351V102.695H13.3301C13.3717 102.563 13.4523 102.539 13.7383 102.539H13.7903C14.1647 102.539 14.2089 102.597 14.2089 102.937V102.992C14.2089 103.312 14.1595 103.374 13.7721 103.374H13.7279C13.3613 103.374 13.3041 103.335 13.3041 103.036V103H13.1091V103.041C13.1091 103.462 13.1949 103.546 13.7123 103.546Z"
+       id="label-5-103.53"
+       inkscape:label="5" />
+    <path
+       style="fill:#1f1f1f;stroke:none"
+       d="M13.7773 114.946C14.3025 114.946 14.4117 114.847 14.4117 114.444V114.379C14.4117 113.958 14.3025 113.88 13.8085 113.88H13.7643C13.4783 113.88 13.3665 113.934 13.3119 114.051H13.3093V113.903C13.3093 113.365 13.3665 113.318 13.7565 113.318H13.7929C14.1283 113.318 14.1829 113.362 14.1829 113.64V113.685H14.3779V113.635C14.3779 113.23 14.2869 113.146 13.7981 113.146H13.7513C13.2053 113.146 13.1013 113.235 13.1013 113.965V114.296C13.1013 114.844 13.1819 114.946 13.7279 114.946ZM13.7383 114.774C13.3639 114.774 13.3067 114.725 13.3067 114.371V114.332C13.3067 114.095 13.4107 114.046 13.7383 114.046H13.7721C14.1517 114.046 14.2089 114.098 14.2089 114.392V114.436C14.2089 114.722 14.1569 114.774 13.7721 114.774Z"
+       id="label-6-114.93"
+       inkscape:label="6" />
+    <rect
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.15"
+       x="3" y="51.3" width="3.2" height="68.4"
+       id="ladder-frame"
+       inkscape:label="ladder frame" />
+    <rect
+       style="fill:#1f1f1f;fill-opacity:0.35;stroke:none"
+       x="3" y="51.3" width="0.5333" height="11.4"
+       id="ladder-step1"
+       inkscape:label="ladder step 1" />
+    <rect
+       style="fill:#1f1f1f;fill-opacity:0.35;stroke:none"
+       x="3" y="62.7" width="1.0667" height="11.4"
+       id="ladder-step2"
+       inkscape:label="ladder step 2" />
+    <path
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.15"
+       d="M 3,62.7 h 3.2"
+       id="ladder-tick2"
+       inkscape:label="ladder tick 2" />
+    <rect
+       style="fill:#1f1f1f;fill-opacity:0.35;stroke:none"
+       x="3" y="74.1" width="1.6" height="11.4"
+       id="ladder-step3"
+       inkscape:label="ladder step 3" />
+    <path
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.15"
+       d="M 3,74.1 h 3.2"
+       id="ladder-tick3"
+       inkscape:label="ladder tick 3" />
+    <rect
+       style="fill:#1f1f1f;fill-opacity:0.35;stroke:none"
+       x="3" y="85.5" width="2.1333" height="11.4"
+       id="ladder-step4"
+       inkscape:label="ladder step 4" />
+    <path
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.15"
+       d="M 3,85.5 h 3.2"
+       id="ladder-tick4"
+       inkscape:label="ladder tick 4" />
+    <rect
+       style="fill:#1f1f1f;fill-opacity:0.35;stroke:none"
+       x="3" y="96.9" width="2.6667" height="11.4"
+       id="ladder-step5"
+       inkscape:label="ladder step 5" />
+    <path
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.15"
+       d="M 3,96.9 h 3.2"
+       id="ladder-tick5"
+       inkscape:label="ladder tick 5" />
+    <rect
+       style="fill:#1f1f1f;fill-opacity:0.35;stroke:none"
+       x="3" y="108.3" width="3.2" height="11.4"
+       id="ladder-step6"
+       inkscape:label="ladder step 6" />
+    <path
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.15"
+       d="M 3,108.3 h 3.2"
+       id="ladder-tick6"
+       inkscape:label="ladder tick 6" />
+    <path
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+       d="M 14.2,31.75 H 14.7 L 18.2,28.25 H 18.7"
+       id="icon-overlap-a"
+       inkscape:label="overlap icon ramp a" />
+    <path
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+       d="M 14.2,28.25 H 14.7 L 18.2,31.75 H 18.7"
+       id="icon-overlap-b"
+       inkscape:label="overlap icon ramp b" />
+    <path
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round"
+       d="M 14.2,45.75 C 16.45,45.75 16.45,42.25 18.7,42.25"
+       id="icon-smooth"
+       inkscape:label="smooth icon curve" />
+    <path
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round"
+       d="M 2.8,20 H 10.7 M 9.4,18.8 L 10.7,20 L 9.4,21.2"
+       id="input-arrow"
+       inkscape:label="input arrow" />
+    <path
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round"
+       d="M 25,57 H 29.6 M 28.3,55.8 L 29.6,57 L 28.3,58.2"
+       id="out-arrow1"
+       inkscape:label="output arrow 1" />
+    <path
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round"
+       d="M 25,68.4 H 29.6 M 28.3,67.2 L 29.6,68.4 L 28.3,69.6"
+       id="out-arrow2"
+       inkscape:label="output arrow 2" />
+    <path
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round"
+       d="M 25,79.8 H 29.6 M 28.3,78.6 L 29.6,79.8 L 28.3,81"
+       id="out-arrow3"
+       inkscape:label="output arrow 3" />
+    <path
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round"
+       d="M 25,91.2 H 29.6 M 28.3,90 L 29.6,91.2 L 28.3,92.4"
+       id="out-arrow4"
+       inkscape:label="output arrow 4" />
+    <path
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round"
+       d="M 25,102.6 H 29.6 M 28.3,101.4 L 29.6,102.6 L 28.3,103.8"
+       id="out-arrow5"
+       inkscape:label="output arrow 5" />
+    <path
+       style="fill:none;stroke:#1f1f1f;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round"
+       d="M 25,114 H 29.6 M 28.3,112.8 L 29.6,114 L 28.3,115.2"
+       id="out-arrow6"
+       inkscape:label="output arrow 6" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="components"
      style="display:none">
@@ -215,7 +370,7 @@
        r="4" />
     <circle
        inkscape:label="blink5"
-       cy="102"
+       cy="102.6"
        cx="10"
        id="blink5"
        style="display:inline;opacity:1;vector-effect:none;fill:#ff00ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
@@ -224,12 +379,12 @@
        style="display:inline;opacity:1;vector-effect:none;fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
        id="out5"
        cx="20"
-       cy="102"
+       cy="102.6"
        inkscape:label="out5"
        r="4" />
     <circle
        inkscape:label="blink4"
-       cy="90"
+       cy="91.2"
        cx="10"
        id="blink4"
        style="display:inline;opacity:1;vector-effect:none;fill:#ff00ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
@@ -238,12 +393,12 @@
        style="display:inline;opacity:1;vector-effect:none;fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
        id="out4"
        cx="20"
-       cy="90"
+       cy="91.2"
        inkscape:label="out4"
        r="4" />
     <circle
        inkscape:label="blink3"
-       cy="78"
+       cy="79.8"
        cx="10"
        id="blink3"
        style="display:inline;opacity:1;vector-effect:none;fill:#ff00ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
@@ -252,12 +407,12 @@
        style="display:inline;opacity:1;vector-effect:none;fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
        id="out3"
        cx="20"
-       cy="78"
+       cy="79.8"
        inkscape:label="out3"
        r="4" />
     <circle
        inkscape:label="blink2"
-       cy="66"
+       cy="68.4"
        cx="10"
        id="blink2"
        style="display:inline;opacity:1;vector-effect:none;fill:#ff00ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
@@ -266,12 +421,12 @@
        style="display:inline;opacity:1;vector-effect:none;fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
        id="out2"
        cx="20"
-       cy="66"
+       cy="68.4"
        inkscape:label="out2"
        r="4" />
     <circle
        inkscape:label="blink1"
-       cy="54"
+       cy="57"
        cx="10"
        id="blink1"
        style="display:inline;opacity:1;vector-effect:none;fill:#ff00ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
@@ -280,7 +435,7 @@
        style="display:inline;opacity:1;vector-effect:none;fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
        id="out1"
        cx="20"
-       cy="54"
+       cy="57"
        inkscape:label="out1"
        r="4" />
     <circle

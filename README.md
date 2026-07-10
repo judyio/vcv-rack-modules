@@ -2,7 +2,7 @@
 
 A utility module for [VCV Rack](https://vcvrack.com/) that subdivides a unipolar signal into a series of full-range output signals.
 
-![judyIO Range Expander](res/RangeExpander.svg)
+![judyIO Range Expander — light and dark panels](panel-preview.png)
 
 ## What it does
 
