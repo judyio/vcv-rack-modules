@@ -60,6 +60,26 @@ make install  # build, package, and install into your Rack user folder
 
 `make install` is the quickest way to try the module: restart Rack afterward and it appears under the judyIO brand.
 
+## Panel design workflow
+
+Everything on the panels except the background, logo, and title is generated: the labels are outlined **Eurostile Next LT Pro** paths (Rack can't render live text, and this way the SVGs need no fonts), and the glyphs, arrows, and slice ladder are drawn from layout constants. The scripts live in `design/`:
+
+- **`design/gen_labels.py`** — the single source of truth for the label/glyph/arrow/ladder layout. All coordinates and sizes are constants at the top. Needs the Eurostile Next LT Pro Regular OTF (path at the top of the file) and fontTools (`pip3 install fonttools`).
+- **`design/update_panels.py`** — regenerates the `LABELS` layer inside both `res/*.svg` in place, leaving the hand-drawn layers untouched:
+
+  ```sh
+  python3 design/update_panels.py
+  ```
+
+- **`design/render_preview.sh`** — re-renders `panel-preview.png` (the image above) by compositing VCV Rack's component graphics onto the panels:
+
+  ```sh
+  brew install librsvg imagemagick   # once
+  bash design/render_preview.sh
+  ```
+
+Component positions are defined in `src/RangeExpander.cpp` and duplicated in `render_preview.sh` — if you move a jack, knob, or light, update both, and keep the hidden `components` layer in the SVGs in sync too.
+
 ## License
 
 Source code licensed under [GPL-3.0-or-later](LICENSE).
