@@ -80,6 +80,10 @@ Everything on the panels except the background, logo, and title is generated: th
 
 Component positions are defined in `src/RangeExpander.cpp` and duplicated in `render_preview.sh` — if you move a jack, knob, or light, update both, and keep the hidden `components` layer in the SVGs in sync too.
 
+## Roadmap & feedback
+
+Planned features, open design questions, and bug reports all live in [GitHub issues](https://github.com/judy/judyIO-RangeExpander/issues) — that includes the big ones, like audio mode and the someday-hardware version. Found a bug or have a patch idea? Open an issue.
+
 ## License
 
 Source code licensed under [GPL-3.0-or-later](LICENSE).
