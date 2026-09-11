@@ -13,6 +13,10 @@ CL="/Applications/VCV Rack 2 Pro.app/Contents/Resources/res/ComponentLibrary"
 RES="$ROOT/res"
 S=20  # px per mm
 
+# librsvg draws far more of SVG than Rack does, so a panel can look right here
+# and wrong in Rack. Refuse to render a preview that Rack cannot reproduce.
+python3 "$ROOT/design/check_rack_svg.py" "$RES"/*.svg
+
 mm2px() { python3 -c "print(round($1 * $S))"; }
 
 # component sizes in mm (svg px * 25.4/75)

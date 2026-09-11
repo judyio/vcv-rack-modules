@@ -68,6 +68,12 @@ make install  # build, package, and install into your Rack user folder
 
 Everything on the panels except the background, logo, and title is generated: the labels are outlined **Eurostile Next LT Pro** paths (Rack can't render live text, and this way the SVGs need no fonts), and the glyphs, arrows, and slice ladder are drawn from layout constants. The scripts live in `design/`:
 
+- **`design/check_rack_svg.py`** — checks both panels against the SVG subset that Rack can actually draw, and fails on anything it cannot. Rack parses panels with nanosvg and draws them with NanoVG, which supports far less SVG than librsvg. A gradient *stroke* is the trap: Rack never sets a stroke colour for one, so NanoVG strokes it opaque black. `render_preview.sh` runs this check first, so a preview can never show a panel that Rack cannot reproduce.
+
+  ```sh
+  python3 design/check_rack_svg.py res/*.svg
+  ```
+
 - **`design/gen_labels.py`** — the single source of truth for the label/glyph/arrow/ladder layout. All coordinates and sizes are constants at the top. Needs the Eurostile Next LT Pro Regular OTF (path at the top of the file) and fontTools (`pip3 install fonttools`).
 - **`design/update_panels.py`** — regenerates the `LABELS` layer inside both `res/*.svg` in place, leaving the hand-drawn layers untouched:
 
