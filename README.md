@@ -1,10 +1,14 @@
-# Range Expander
+# JUDYIO
 
-A utility module for [VCV Rack](https://vcvrack.com/) that subdivides a unipolar signal into a series of full-range output signals.
+Modules for [VCV Rack](https://vcvrack.com/) by Clinton Judy.
 
-![judyIO Range Expander — light and dark panels](panel-preview.png)
+![JUDYIO Range Expander — light and dark panels](panel-preview.png)
 
-## What it does
+## Modules
+
+### Range Expander
+
+A utility module that subdivides a unipolar signal into a series of full-range output signals.
 
 Patch a 0–10V signal into the input, and Range Expander splits its range across every connected output. Each output watches its own slice of the input range and rescales that slice to a full 0–10V sweep:
 
@@ -15,7 +19,7 @@ Outputs are assigned top to bottom, and only *connected* outputs count — the m
 
 The name says it: one modulation source becomes a sequence of full-range gestures. A single slow LFO sweep can open six filters one after another. A ramp becomes a cascade. A macro knob becomes a scene controller.
 
-## Controls
+#### Controls
 
 | Control | Function |
 |---|---|
@@ -26,14 +30,14 @@ The name says it: one modulation source becomes a sequence of full-range gesture
 
 CV inputs take priority over their knobs when connected.
 
-## Patch ideas
+#### Patch ideas
 
 - **Sequential filter sweep** — one slow LFO into In, outputs 1–4 into four filter cutoffs. The filters open in sequence as the LFO rises.
 - **Macro control** — a single knob (or fader) recorded into In becomes a scene morph: each output brings in one voice/effect as you turn.
 - **Cascading envelopes** — a long envelope into In turns into staggered per-voice articulation.
 - **Overlap as crossfade** — with overlap up, adjacent outputs hand off gradually; use pairs to crossfade between modulation destinations.
 
-## Bypass behavior
+#### Bypass behavior
 
 When the module is bypassed, the input is routed directly to all outputs.
 
@@ -58,7 +62,7 @@ make dist     # package a distributable .vcvplugin
 make install  # build, package, and install into your Rack user folder
 ```
 
-`make install` is the quickest way to try the module: restart Rack afterward and it appears under the judyIO brand.
+`make install` is the quickest way to try the modules: restart Rack afterward and they appear under the JUDYIO brand.
 
 ## Panel design workflow
 
@@ -82,7 +86,7 @@ Component positions are defined in `src/RangeExpander.cpp` and duplicated in `re
 
 ## Roadmap & feedback
 
-Planned features, open design questions, and bug reports all live in [GitHub issues](https://github.com/judy/judyIO-RangeExpander/issues) — that includes the big ones, like audio mode and the someday-hardware version. Found a bug or have a patch idea? Open an issue.
+Planned features, open design questions, and bug reports all live in [GitHub issues](https://github.com/judyio/vcv-rack-modules/issues) — that includes the big ones, like audio mode and the someday-hardware version. Found a bug or have a patch idea? Open an issue.
 
 ## License
 
